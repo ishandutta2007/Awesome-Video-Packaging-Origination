@@ -6,7 +6,7 @@
 
 <p align="center">
   <a href="https://github.com/ishandutta2007/Awesome-Awesome-Awesome"><img src="https://img.shields.io/badge/Awesome-%E2%9C%94-blueviolet?style=flat-square&logo=github" alt="Awesome"/></a><a href="https://discord.gg/jc4xtF58Ve"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" /></a>
-  <a href="https://github.com/ishandutta2007/Awesome-Video-Packaging-Origination/stargazers"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-Video-Packaging-Origination?style=flat-square&logo=github" alt="GitHub Stars"/></a>
+  <a href="https://github.com/ishandutta2007/Awesome-Video-Packaging-Origination/stargazers"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-Video-Packaging-Origination?style=flat-square&logo=github" alt="GitHub_Stars"/></a>
   <a href="https://github.com/ishandutta2007/Awesome-Video-Packaging-Origination/network/members"><img src="https://img.shields.io/github/forks/ishandutta2007/Awesome-Video-Packaging-Origination?style=flat-square&logo=github" alt="GitHub Forks"/></a>
   <a href="https://github.com/ishandutta2007/Awesome-Video-Packaging-Origination/blob/main/LICENSE"><img src="https://img.shields.io/github/license/ishandutta2007/Awesome-Video-Packaging-Origination?style=flat-square" alt="License"/></a>
   <a href="https://github.com/ishandutta2007"><img alt="GitHub followers" src="https://img.shields.io/github/followers/ishandutta2007?label=Follow" /></a>
@@ -62,7 +62,7 @@ This repository tracks leading **commercial video packaging platforms** and top 
 
 ## 🔓 Open-Source GitHub Projects
 
-*Sorted by GitHub Star Count (Descending)* ⭐
+*Sorted by GitHub Stars_Count (Descending)* ⭐
 
 - **[Caddy](https://github.com/caddyserver/caddy)** <a href="https://github.com/caddyserver/caddy/stargazers"><img src="https://img.shields.io/github/stars/caddyserver/caddy?style=social&color=white" alt="Caddy Stars"/></a>  
   **Modern HTTP/3 web server with automatic HTTPS**, Apache-2.0 licensed. Serves HLS/DASH playlists and fragmented MP4 segments with zero-configuration TLS. **Best for modern origin serving**.
@@ -140,7 +140,7 @@ Contributions are warmly welcome! To add a new platform or open-source tool:
 
 1. 🔀 **Fork the repository**.
 2. 📝 **Add your entry** under the appropriate section following the existing formatting.
-3. 🔗 **Include clear metadata**: Name, official URL, star count badge (for open-source), pricing model, and a concise 1–2 sentence description.
+3. 🔗 **Include clear metadata**: Name, official URL, Stars_Count badge (for open-source), pricing model, and a concise 1–2 sentence description.
 4. 🚀 **Submit a Pull Request (PR)** with a clear summary of your changes.
 
 Check out [Awesome Lists](https://github.com/ishandutta2007/Awesome-Awesome-Awesome) for contribution guidelines.
