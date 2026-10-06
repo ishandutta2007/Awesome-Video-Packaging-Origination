@@ -62,7 +62,7 @@ This repository tracks leading **commercial video packaging platforms** and top 
 
 ## 🔓 Open-Source GitHub Projects
 
-*Sorted by GitHub Stars_Count (Descending)* ⭐
+*Sorted by GitHub_Stars_Count (Descending)* ⭐
 
 - **[Caddy](https://github.com/caddyserver/caddy)** <a href="https://github.com/caddyserver/caddy/stargazers"><img src="https://img.shields.io/github/stars/caddyserver/caddy?style=social&color=white" alt="Caddy Stars"/></a>  
   **Modern HTTP/3 web server with automatic HTTPS**, Apache-2.0 licensed. Serves HLS/DASH playlists and fragmented MP4 segments with zero-configuration TLS. **Best for modern origin serving**.
