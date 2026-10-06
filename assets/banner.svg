@@ -1,131 +1,139 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" width="100%" height="360" style="background: linear-gradient(135deg, #0b0f19 0%, #111827 50%, #1e1b4b 100%); font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; border-radius: 12px; overflow: hidden;">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" width="1200" height="360">
   <defs>
-    <!-- Background Gradients & Glows -->
-    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+    <!-- Background Gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="50%" stop-color="#1e1b4b"/>
+      <stop offset="100%" stop-color="#090d16"/>
+    </linearGradient>
+
+    <!-- Title Text Gradient -->
+    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#38bdf8"/>
       <stop offset="50%" stop-color="#818cf8"/>
       <stop offset="100%" stop-color="#c084fc"/>
     </linearGradient>
 
+    <!-- Animated Dynamic Stream Gradients -->
     <linearGradient id="streamGrad1" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#0284c7" stop-opacity="0.1"/>
-      <stop offset="50%" stop-color="#38bdf8" stop-opacity="0.8"/>
-      <stop offset="100%" stop-color="#818cf8" stop-opacity="0.1"/>
+      <stop offset="0%" stop-color="#0284c7" stop-opacity="0.2"/>
+      <stop offset="50%" stop-color="#38bdf8" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#818cf8" stop-opacity="0.2"/>
     </linearGradient>
 
     <linearGradient id="streamGrad2" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#6366f1" stop-opacity="0.1"/>
-      <stop offset="50%" stop-color="#a855f7" stop-opacity="0.8"/>
-      <stop offset="100%" stop-color="#ec4899" stop-opacity="0.1"/>
+      <stop offset="0%" stop-color="#6366f1" stop-opacity="0.2"/>
+      <stop offset="50%" stop-color="#a855f7" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#ec4899" stop-opacity="0.2"/>
     </linearGradient>
-
-    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="8" result="blur"/>
-      <feMerge>
-        <feMergeNode in="blur"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
-    </filter>
-
-    <filter id="lightGlow" x="-10%" y="-10%" width="120%" height="120%">
-      <feGaussianBlur stdDeviation="4" result="blur"/>
-      <feMerge>
-        <feMergeNode in="blur"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
-    </filter>
   </defs>
 
   <style>
-    /* Dynamic Animated Elements (Background Layer Only) */
-    @keyframes waveMove1 {
+    @keyframes waveFlow1 {
       0% { transform: translateX(0px); }
-      50% { transform: translateX(-60px); }
+      50% { transform: translateX(-40px); }
       100% { transform: translateX(0px); }
     }
-    @keyframes waveMove2 {
+    @keyframes waveFlow2 {
       0% { transform: translateX(0px); }
-      50% { transform: translateX(80px); }
+      50% { transform: translateX(50px); }
       100% { transform: translateX(0px); }
     }
-    @keyframes pulseParticle {
+    @keyframes pulseGlow {
       0%, 100% { opacity: 0.3; transform: scale(1); }
-      50% { opacity: 0.9; transform: scale(1.4); }
+      50% { opacity: 0.9; transform: scale(1.3); }
     }
-    @keyframes dashStream {
-      0% { stroke-dashoffset: 1000; }
-      100% { stroke-dashoffset: 0; }
-    }
-
-    .animated-wave1 { animation: waveMove1 12s ease-in-out infinite; }
-    .animated-wave2 { animation: waveMove2 16s ease-in-out infinite; }
-    .pulse-dot { animation: pulseParticle 4s ease-in-out infinite; }
-    .stream-line { stroke-dasharray: 20 15; animation: dashStream 25s linear infinite; }
+    .wave1 { animation: waveFlow1 10s ease-in-out infinite; }
+    .wave2 { animation: waveFlow2 14s ease-in-out infinite; }
+    .pulse-dot { animation: pulseGlow 3s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
   </style>
 
-  <!-- BACKGROUND GRAPHICS (Dynamic Animated Streams) -->
-  <g opacity="0.35">
-    <!-- Grid Pattern -->
-    <path d="M 0,60 L 1200,60 M 0,120 L 1200,120 M 0,180 L 1200,180 M 0,240 L 1200,240 M 0,300 L 1200,300" stroke="#334155" stroke-width="0.5" stroke-opacity="0.5"/>
-    <path d="M 200,0 L 200,360 M 400,0 L 400,360 M 600,0 L 600,360 M 800,0 L 800,360 M 1000,0 L 1000,360" stroke="#334155" stroke-width="0.5" stroke-opacity="0.5"/>
+  <!-- SOLID SVG BACKGROUND RECTANGLE -->
+  <rect width="1200" height="360" rx="12" fill="url(#bgGrad)"/>
 
-    <!-- Animated Dynamic Waves -->
-    <path class="animated-wave1 stream-line" d="M -100,260 Q 200,180 500,270 T 1100,200 T 1300,280" fill="none" stroke="url(#streamGrad1)" stroke-width="4"/>
-    <path class="animated-wave2 stream-line" d="M -100,100 Q 300,220 700,120 T 1300,190" fill="none" stroke="url(#streamGrad2)" stroke-width="3"/>
-    
-    <!-- Floating Glowing Data Nodes -->
-    <circle cx="150" cy="120" r="4" fill="#38bdf8" class="pulse-dot" style="animation-delay: 0s;"/>
-    <circle cx="950" cy="90" r="5" fill="#818cf8" class="pulse-dot" style="animation-delay: 1s;"/>
-    <circle cx="1080" cy="260" r="4" fill="#c084fc" class="pulse-dot" style="animation-delay: 2s;"/>
-    <circle cx="280" cy="290" r="6" fill="#38bdf8" class="pulse-dot" style="animation-delay: 1.5s;"/>
-    <circle cx="800" cy="280" r="3" fill="#ec4899" class="pulse-dot" style="animation-delay: 0.5s;"/>
+  <!-- DYNAMIC ANIMATED BACKGROUND LAYER -->
+  <g opacity="0.4">
+    <!-- Grid pattern lines -->
+    <line x1="0" y1="60" x2="1200" y2="60" stroke="#334155" stroke-width="0.5" stroke-dasharray="4 4"/>
+    <line x1="0" y1="120" x2="1200" y2="120" stroke="#334155" stroke-width="0.5" stroke-dasharray="4 4"/>
+    <line x1="0" y1="180" x2="1200" y2="180" stroke="#334155" stroke-width="0.5" stroke-dasharray="4 4"/>
+    <line x1="0" y1="240" x2="1200" y2="240" stroke="#334155" stroke-width="0.5" stroke-dasharray="4 4"/>
+    <line x1="0" y1="300" x2="1200" y2="300" stroke="#334155" stroke-width="0.5" stroke-dasharray="4 4"/>
+
+    <line x1="200" y1="0" x2="200" y2="360" stroke="#334155" stroke-width="0.5" stroke-dasharray="4 4"/>
+    <line x1="400" y1="0" x2="400" y2="360" stroke="#334155" stroke-width="0.5" stroke-dasharray="4 4"/>
+    <line x1="600" y1="0" x2="600" y2="360" stroke="#334155" stroke-width="0.5" stroke-dasharray="4 4"/>
+    <line x1="800" y1="0" x2="800" y2="360" stroke="#334155" stroke-width="0.5" stroke-dasharray="4 4"/>
+    <line x1="1000" y1="0" x2="1000" y2="360" stroke="#334155" stroke-width="0.5" stroke-dasharray="4 4"/>
+
+    <!-- Wave lines -->
+    <path class="wave1" d="M -50,260 Q 250,160 550,260 T 1150,210" fill="none" stroke="url(#streamGrad1)" stroke-width="3" stroke-dasharray="15 10"/>
+    <path class="wave2" d="M -50,110 Q 350,210 750,110 T 1250,180" fill="none" stroke="url(#streamGrad2)" stroke-width="3" stroke-dasharray="20 12"/>
+
+    <!-- Floating animated particles -->
+    <circle cx="140" cy="110" r="5" fill="#38bdf8" class="pulse-dot"/>
+    <circle cx="980" cy="80" r="6" fill="#818cf8" class="pulse-dot" style="animation-delay: 1s;"/>
+    <circle cx="1060" cy="270" r="5" fill="#c084fc" class="pulse-dot" style="animation-delay: 2s;"/>
+    <circle cx="260" cy="280" r="7" fill="#38bdf8" class="pulse-dot" style="animation-delay: 1.5s;"/>
   </g>
 
-  <!-- FOREGROUND CONTENT (Guaranteed High Contrast & Visible Foreground) -->
+  <!-- FOREGROUND CONTENT LAYER (Guaranteed High Contrast Text & Visual Elements) -->
   <g transform="translate(60, 0)">
-    <!-- Top Pill Badge -->
-    <g transform="translate(0, 48)">
-      <rect x="0" y="0" width="220" height="28" rx="14" fill="#1e293b" stroke="#38bdf8" stroke-opacity="0.4" stroke-width="1"/>
-      <circle cx="14" cy="14" r="5" fill="#10b981"/>
-      <text x="28" y="18" fill="#e2e8f0" font-size="12" font-weight="600" letter-spacing="0.5">OPEN-SOURCE &amp; SAAS ECOSYSTEM</text>
+
+    <!-- Top Badge Pill -->
+    <g transform="translate(0, 45)">
+      <rect x="0" y="0" width="225" height="28" rx="14" fill="#1e293b" stroke="#38bdf8" stroke-width="1"/>
+      <circle cx="14" cy="14" r="4" fill="#10b981"/>
+      <text x="26" y="18" fill="#e2e8f0" font-size="11" font-weight="bold" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" letter-spacing="0.5">OPEN-SOURCE &amp; SAAS ECOSYSTEM</text>
     </g>
 
-    <!-- Main Title -->
-    <text x="0" y="132" fill="url(#titleGrad)" font-size="40" font-weight="800" letter-spacing="-0.5" filter="url(#lightGlow)">
+    <!-- Main Title Text -->
+    <text x="0" y="130" fill="url(#titleGrad)" font-size="38" font-weight="800" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" letter-spacing="-0.5">
       Awesome Video Packaging &amp; Origination
     </text>
 
-    <!-- Subtitle -->
-    <text x="0" y="172" fill="#94a3b8" font-size="17" font-weight="400" letter-spacing="0.2">
+    <!-- Subtitle Text -->
+    <text x="0" y="170" fill="#94a3b8" font-size="16" font-weight="400" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
       Curated List of JIT Packaging, Live Encoding, Manifest Manipulation, SSAI &amp; Origin Servers
     </text>
 
-    <!-- Tech Tag Pills in Foreground -->
+    <!-- Category Pills -->
     <g transform="translate(0, 215)">
-      <!-- Pill 1: HLS & DASH -->
-      <rect x="0" y="0" width="115" height="32" rx="8" fill="#0f172a" stroke="#38bdf8" stroke-width="1.2"/>
-      <text x="57" y="21" fill="#38bdf8" font-size="13" font-weight="700" text-anchor="middle">HLS / DASH</text>
+      <!-- Pill 1: HLS / DASH -->
+      <g transform="translate(0, 0)">
+        <rect x="0" y="0" width="110" height="30" rx="6" fill="#0f172a" stroke="#38bdf8" stroke-width="1"/>
+        <text x="55" y="19" fill="#38bdf8" font-size="12" font-weight="bold" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" text-anchor="middle">HLS / DASH</text>
+      </g>
 
       <!-- Pill 2: CMAF -->
-      <rect x="127" y="0" width="85" height="32" rx="8" fill="#0f172a" stroke="#818cf8" stroke-width="1.2"/>
-      <text x="169" y="21" fill="#818cf8" font-size="13" font-weight="700" text-anchor="middle">CMAF</text>
+      <g transform="translate(122, 0)">
+        <rect x="0" y="0" width="80" height="30" rx="6" fill="#0f172a" stroke="#818cf8" stroke-width="1"/>
+        <text x="40" y="19" fill="#818cf8" font-size="12" font-weight="bold" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" text-anchor="middle">CMAF</text>
+      </g>
 
-      <!-- Pill 3: DRM Signaling -->
-      <rect x="224" y="0" width="130" height="32" rx="8" fill="#0f172a" stroke="#c084fc" stroke-width="1.2"/>
-      <text x="289" y="21" fill="#c084fc" font-size="13" font-weight="700" text-anchor="middle">DRM Signaling</text>
+      <!-- Pill 3: Multi-DRM -->
+      <g transform="translate(214, 0)">
+        <rect x="0" y="0" width="110" height="30" rx="6" fill="#0f172a" stroke="#c084fc" stroke-width="1"/>
+        <text x="55" y="19" fill="#c084fc" font-size="12" font-weight="bold" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" text-anchor="middle">Multi-DRM</text>
+      </g>
 
-      <!-- Pill 4: SSAI & Ad Insertion -->
-      <rect x="366" y="0" width="155" height="32" rx="8" fill="#0f172a" stroke="#f472b6" stroke-width="1.2"/>
-      <text x="443" y="21" fill="#f472b6" font-size="13" font-weight="700" text-anchor="middle">SSAI &amp; Ad Insertion</text>
+      <!-- Pill 4: SSAI & Dynamic Ads -->
+      <g transform="translate(336, 0)">
+        <rect x="0" y="0" width="150" height="30" rx="6" fill="#0f172a" stroke="#f472b6" stroke-width="1"/>
+        <text x="75" y="19" fill="#f472b6" font-size="12" font-weight="bold" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" text-anchor="middle">SSAI &amp; Ad Insertion</text>
+      </g>
 
       <!-- Pill 5: Origin Servers -->
-      <rect x="533" y="0" width="130" height="32" rx="8" fill="#0f172a" stroke="#34d399" stroke-width="1.2"/>
-      <text x="598" y="21" fill="#34d399" font-size="13" font-weight="700" text-anchor="middle">Origin Servers</text>
+      <g transform="translate(498, 0)">
+        <rect x="0" y="0" width="125" height="30" rx="6" fill="#0f172a" stroke="#34d399" stroke-width="1"/>
+        <text x="62" y="19" fill="#34d399" font-size="12" font-weight="bold" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" text-anchor="middle">Origin Servers</text>
+      </g>
     </g>
 
-    <!-- Bottom Feature Bar -->
-    <text x="0" y="290" fill="#64748b" font-size="13" font-weight="500">
-      🚀 Updated for 2026 &nbsp;|&nbsp; ⚡ Just-in-Time Packaging &nbsp;|&nbsp; 🛡️ Multi-DRM &amp; SSAI &nbsp;|&nbsp; 🌐 Cloud &amp; On-Prem
+    <!-- Bottom Metadata Bar -->
+    <text x="0" y="290" fill="#64748b" font-size="13" font-weight="500" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+      🚀 Updated for 2026  •  ⚡ Just-in-Time Packaging  •  🛡️ DRM &amp; SSAI  •  🌐 Cloud &amp; Open-Source
     </text>
+
   </g>
 </svg>
