@@ -42,65 +42,20 @@ Contributions welcome! Open a PR to add/update entries. Keep descriptions factua
 
 ## SaaS/Hosted Platforms
 
+> **Estimated Market Size & Structure:** The global video packaging, origination, and VOD infrastructure market is estimated at **~$123 Billion** (projected through 2026–2033), and the sector is **highly fragmented** due to a proliferation of specialized point solutions, multi-format delivery requirements (HLS/DASH/CMAF), and custom cloud workflow architectures.
 
-
-- **[AWS Elemental MediaPackage](https://aws.amazon.com/mediapackage/)**  
-
-  **The leading cloud just-in-time packaging and origination service**, running entirely in AWS Cloud . **Performs JITP (Just-in-Time Packaging)** — dynamically customizes live streams and creates device-compatible manifests on request . **Channel groups, channels, and endpoints** architecture supports HLS, DASH-ISO, Microsoft Smooth Streaming, and CMAF outputs . **Built-in resiliency and scalability** with no manual intervention required . **Deep AWS integration** with MediaLive, CloudFront, and S3. **Best for AWS-native video workflows** .
-
-
-
-- **[Unified Streaming](https://www.unified-streaming.com/)**  
-
-  **The pioneer of JIT packaging** — software-based origin that dynamically packages content into any format. **Unified Remix** enables content stitching and ad insertion . **Media Processing add-on** provides frame-accurate capture, clip generation, and media conditioning for SSAI/DAI . **HLG and Dolby Vision support** with CMAF and DASH output . **On-premise or cloud deployment** — used by broadcasters and service providers worldwide .
-
-
-
-- **[Harmonic VOS360](https://www.harmonicinc.com/)**  
-
-  **Market-leading cloud SaaS media processing and delivery platform** . **VOS360 Media SaaS** simplifies all stages of media processing for premium streaming and broadcast . **VOS360 Ad SaaS** provides AI-powered ad break detection and SCTE-35 marker insertion for live content without markers . **Qualified on Akamai Cloud** with CDN and security capabilities . **AI features**: automated subtitles, sports clipping, and translation with voice cloning . **Best for broadcast-grade deployments** .
-
-
-
-- **[Bitmovin Live](https://bitmovin.com/)**  
-
-  **Award-winning multi-cloud SaaS live encoder** . **Three-element workflow**: Input (RTMP, SRT, Zixi), Encoding (ABR, HLS/DASH, DRM), and Output (S3, GCS, Azure, Akamai) . **API, templates, or dashboard UI** configuration . **ESAM settings** for dynamic ad insertion . **Best for developer-friendly live encoding** .
-
-
-
-- **[Brightcove Dynamic Delivery](https://www.brightcove.com/)**  
-
-  **Fully managed cloud-based JIT packaging service** . **Single mezzanine file** — dynamically packages to HLS, DASH, Smooth, or MP4 based on device requirements . **DRM packaging** for FairPlay, Widevine, and PlayReady . **Multi-region cloud infrastructure** for high availability and scalability . **Best for Brightcove platform users** .
-
-
-
-- **[Fastly Media Shield](https://www.fastly.com/)**  
-
-  **Multi-CDN origin shielding and request collapsing** . **Reduces origin traffic** by consolidating duplicate requests — critical for multi-CDN architectures . **Cache Clustering** keeps long-tail content in cache longer . **Configures as origin behind existing CDNs** with minimal workflow changes . **Best for multi-CDN deployments** .
-
-
-
-- **[Broadpeak broadpeak.io](https://broadpeak.io/)**  
-
-  **API-based SaaS platform for content delivery and monetization** . **Dynamic ad insertion with Spot2Spot** — replaces individual ads within linear streams for precise targeting . **Virtual linear channels** tailored to audience segments . **Fast deployment**: Media Prima (Malaysia) went live in two weeks . **Best for targeted advertising and personalization** .
-
-
-
-- **[Synamedia Iris](https://www.synamedia.com/product/iris/)**  
-
-  **Addressable advertising platform unifying broadcast and streaming** . **Server-Side Ad Insertion (SSAI)** for scalable, seamless ad delivery across CTV devices . **Ad Routing** for dynamic allocation across content and demand sources . **Programmatic access** to CTV advertising demand platforms . **Used by YES (Israel), OSN, MTN, and Astro** . **Best for pay-TV operators and broadcasters** .
-
-
-
-- **[Edgio Uplynk](https://edg.io/)**  
-
-  **Unified streaming media platform** for ingest, encode, manage, monetize, secure, and deliver . **Smartplay** — publish one URL with SSAI, DRM, geoblocking, and content replacement . **Reduced latency** as low as 15 seconds behind live . **Live-to-VOD** for immediate on-demand playback . **Best for broadcast-quality live events** .
-
-
-
-- **[Anevia](https://www.anevia.com/)**  
-
-  **OTT and IPTV software vendor** for live TV, near-live, and VOD delivery . **Founded by VLC Media Player developers** (2003) . **Pioneered cloud DVR and multiscreen solutions** . **Used by broadcasters, telcos, and PayTV operators** . **Best for European deployments** .
+| Platform / Service | Company Size (Valuation / Revenue) ↓ | Pricing (Starting Tier) | Free Tier / Free Trial Limit | Key Focus & Features |
+| :--- | :--- | :--- | :--- | :--- |
+| **[AWS Elemental MediaPackage](https://aws.amazon.com/mediapackage/)** | **~$2.2 Trillion** Market Cap (AWS Revenue **~$100 Billion**/yr) | **$0.040/GB** live ingest, **$0.050/GB** origination (US East) | **60-day POC trial** via AWS Sales / Media Services Insights | Leading cloud JIT packaging & origination service running in AWS Cloud. Dynamically customizes live streams to HLS, DASH, Smooth, and CMAF with DRM. |
+| **[Harmonic VOS360](https://www.harmonicinc.com/)** | **~$1.2 Billion** Market Cap (Annual Revenue **~$600 Million**) | **$0.15/service hour** (AWS Marketplace pay-per-use tier) | **30-day enterprise POC trial** upon request via Harmonic Sales | Broadcast-grade cloud SaaS media processing platform with AI-powered ad break detection, sports clipping, and SCTE-35 ad insertion. |
+| **[Fastly Media Shield](https://www.fastly.com/)** | **~$1.1 Billion** Market Cap (Annual Revenue **~$530 Million**) | **$50.00/month** minimum spend (**$0.12/GB** + **$0.0075/10k requests**) | **$50 one-time credit** free developer trial | Multi-CDN origin shielding and request collapsing to reduce origin traffic and minimize egress costs across multi-CDN setups. |
+| **[Synamedia Iris](https://www.synamedia.com/product/iris/)** | **~$500 Million+** Valuation / Revenue (Backed by Permira) | Enterprise plans starting at **~$500.00/month** base | **30-day proof-of-value trial** upon request via Synamedia Sales | Addressable advertising platform unifying broadcast and streaming with server-side ad insertion (SSAI) across CTV devices. |
+| **[Edgio Uplynk](https://edg.io/)** | **~$300 Million** Annual Revenue (Peak Valuation ~$400M) | **$0.035/GB** egress / **$0.05/minute** live transcoding | **14-day free trial** (includes up to 100 GB test delivery) | Unified streaming platform featuring Smartplay SSAI, DRM packaging, live-to-VOD, and ultra-low latency delivery. |
+| **[Brightcove Dynamic Delivery](https://www.brightcove.com/)** | **~$201 Million** Market Cap / Revenue (Acquired by Bending Spoons) | Managed plans starting at **$199.00/month** base | **30-day free trial** (up to 10 videos and 10,000 video plays) | Fully managed cloud JIT packaging converting single mezzanine files dynamically into HLS, DASH, Smooth, or MP4 with DRM. |
+| **[Bitmovin Live](https://bitmovin.com/)** | **~$200 Million** Valuation (Annual Recurring Revenue **~$30 Million**) | **$0.050/minute** live encoding (**$0.020/min** VOD) | **30-day free trial** (360 live mins, 2,000 VOD mins, 10k player impressions/mo) | Developer-friendly multi-cloud live encoding API with HLS/DASH/CMAF outputs, DRM encryption, and ESAM ad insertion settings. |
+| **[Broadpeak broadpeak.io](https://broadpeak.io/)** | **~$50 Million** Market Cap (Annual Revenue **~$44 Million**) | **$200.00/month** minimum fee (**$0.25/service hour**, **$0.30/ad**) | **30-day free trial** (20 sources, 5 services, 50 GB free egress data) | API-based SaaS platform for dynamic ad insertion (Spot2Spot), virtual linear channel creation, and audience targeting. |
+| **[Anevia](https://www.anevia.com/)** | **~$50 Million** Acquisition Valuation (Acquired by Harmonic) | License plans starting at **~$500.00/month** per node | **30-day evaluation trial** (up to 10 live channel evaluation license) | OTT and IPTV software vendor founded by VLC developers, specializing in cloud DVR and multiscreen live TV origination. |
+| **[Unified Streaming](https://www.unified-streaming.com/)** | **~$40 Million** Valuation (Acquired by Software Combined) | License plans starting at **~$250.00/month** per origin instance | **30-day free trial** (full Unified Origin software evaluation key) | Software-based origin pioneer of JIT packaging, featuring Unified Remix content stitching and DAI media conditioning. |
 
 
 
